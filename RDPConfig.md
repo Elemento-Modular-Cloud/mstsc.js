@@ -1,11 +1,19 @@
 this is a RPD client web page 100% coded in JavaScript using NodeJs
 ### how to run
 - clone the repo
+
 ``` git clone https://github.com/Elemento-Modular-Cloud/Elemento-HTML-viewer.git```
-- enter into the repo
+- enter into the RDP dir
+
+```cd Elemento-HTML-viewer/RDP/mstsc.js```
+- add the submodule to the repo
+
+```git submodule update --init```
 - use npm to download the dependencies
+
 ```npm install```
 - start the client
+
 ```npm start```
 - open the browser on http://localhost:9250/
 
