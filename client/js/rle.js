@@ -3310,7 +3310,7 @@ function copyTempDouble(ptr) {
         if (opts.encoding === 'utf8') {
           ret = '';
           var utf8 = new Runtime.UTF8Processor();
-          for (var i = 0; i < length; i++) {
+          for (var i = 0; i < length; i++) {z
             ret += utf8.processCChar(buf[i]);
           }
         } else if (opts.encoding === 'binary') {

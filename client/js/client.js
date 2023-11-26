@@ -162,7 +162,6 @@
 				console.log('[mstsc.js] error : ' + err.code + '(' + err.message + ')');
 				self.activeSession = false;
 			});
-			
 			// emit infos event
 			this.socket.emit('infos', {
 				ip : ip.indexOf(":")>-1 ? ip.split(":")[0] : ip,
