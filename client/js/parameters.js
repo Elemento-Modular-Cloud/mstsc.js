@@ -3,5 +3,4 @@ class Parameters{
     domain = this.ip;
     username = "";
     password = "";
-
 }

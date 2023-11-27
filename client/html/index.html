@@ -45,13 +45,17 @@
 			Mstsc.$("main").style.display = 'inline';
 		});
 	}
+	function loadNConnect(){
+		load("myCanvas");
+		connect(parameters.ip, parameters.domain, parameters.username,parameters.password);
+	}
 </script>
   </head>
 
-  <body onload='load("myCanvas")'>
+  <body onload='loadNConnect()'>
 
-    <div id="main" class="container">		<!--insert into connect(ip, domain [it could be the same as ip], username, password)-->
-		<form class="form-signin" onSubmit="connect(parameters.ip, parameters.domain, parameters.username,parameters.password); return false;"> <!--onSubmit="connect(this.elements['inputIpAddress'].value, this.elements['inputIpAddress'].value, this.elements['inputUsername'].value, this.elements['inputPassword'].value);return false;">-->
+    <div id="main" class="container">		
+		<!--<form class="form-signin" onSubmit="connect(parameters.ip, parameters.domain, parameters.username,parameters.password); return false; return false;"> <!--onSubmit="connect(this.elements['inputIpAddress'].value, this.elements['inputIpAddress'].value, this.elements['inputUsername'].value, this.elements['inputPassword'].value);return false;">-->
 			<!--<label for="inputIpAddress" class="sr-only">IP Address</label>
 			<input type="string" id="inputIpAddress" class="form-control" placeholder="IP Address">
 			<label for="inputDomain" class="sr-only">Domain</label>
@@ -59,10 +63,11 @@
 			<label for="inputUsername" class="sr-only">Username</label>
 			<input type="string" id="inputUsername" class="form-control" placeholder="Username">
 			<label for="inputPassword" class="sr-only">Password</label>
-			<input type="string" id="inputPassword" class="form-control" placeholder="Password">-->
+			<input type="string" id="inputPassword" class="form-control" placeholder="Password">
 			
 			<button class="btn btn-lg btn-primary btn-block" type="submit" style="background-color: #34A6FF; border-color: #34A6FF">Connect</button>
-		</form>
+		</form>-->
+		
     </div> <!-- /container -->
     <canvas id="myCanvas" style="display:none">
   </body>
