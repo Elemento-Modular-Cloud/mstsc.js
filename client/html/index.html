@@ -22,9 +22,13 @@
 	<script type="text/javascript" src="./js/rle.js"></script>
 	<script type="text/javascript" src="./js/client.js"></script>
 	<script type="text/javascript" src="./js/canvas.js"></script>
+
+	<script type="text/javascript" src="./js/parameters.js"></script>
     <script language="javascript">
-    var client = null;
     
+	var client = null;
+    var parameters = new Parameters();
+
     function load (canvas) {
     	client = Mstsc.client.create(Mstsc.$(canvas));
     } 
@@ -47,7 +51,7 @@
   <body onload='load("myCanvas")'>
 
     <div id="main" class="container">		<!--insert into connect(ip, domain [it could be the same as ip], username, password)-->
-		<form class="form-signin" onSubmit="connect('192.168.122.96', '192.168.122.96', 'marco', 'oh.no.Windows'); return false;"> <!--onSubmit="connect(this.elements['inputIpAddress'].value, this.elements['inputIpAddress'].value, this.elements['inputUsername'].value, this.elements['inputPassword'].value);return false;">-->
+		<form class="form-signin" onSubmit="connect(parameters.ip, parameters.domain, parameters.username,parameters.password); return false;"> <!--onSubmit="connect(this.elements['inputIpAddress'].value, this.elements['inputIpAddress'].value, this.elements['inputUsername'].value, this.elements['inputPassword'].value);return false;">-->
 			<!--<label for="inputIpAddress" class="sr-only">IP Address</label>
 			<input type="string" id="inputIpAddress" class="form-control" placeholder="IP Address">
 			<label for="inputDomain" class="sr-only">Domain</label>
